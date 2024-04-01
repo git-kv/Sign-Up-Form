@@ -103,3 +103,16 @@ button {
 .input-field {
   margin: 1em 2em 1em 2em;
 }
+
+input {
+  border-radius: 5px;
+  border-color: #000;
+}
+
+input:invalid {
+  border-color: red;
+}
+
+input:valid {
+  border-color: green;
+}
