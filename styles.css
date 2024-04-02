@@ -87,7 +87,7 @@ table {
 
 .card-message {
   padding: 0 0 0 1rem;
-  font: 3em "norse";
+  font: 5rem "norse";
 }
 
 .card-attribute {
@@ -108,8 +108,17 @@ table {
 }
 
 .welcome-message {
-  font: 2em sans-serif;
-  padding: 1em;
+  font: 1.5em "norse";
+  padding: 1rem;
+}
+
+.welcome-plea {
+  font: 2em "norse";
+}
+
+.extra-message {
+  padding: 1rem;
+  font: 1rem "norse";
 }
 
 form {
