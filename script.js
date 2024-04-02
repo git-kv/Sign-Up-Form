@@ -1,14 +1,20 @@
 function checkPasswords() {
-  if (document.getElementById('password').value == document.getElementById('confirmPassword').value) {
-    document.getElementById('passwordMessage').style.color = 'green';
-    document.getElementById('password').style.borderColor = 'green';
-    document.getElementById('confirmPassword').style.borderColor = 'green';
+  if (document.getElementById('password').value == document.getElementById('confirmPassword').value && document.getElementById('password').value.length >= 8) {
+    document.getElementById('passwordMessage').style.color = 'rgba(0, 255, 0, 0.5)';
+    document.getElementById('password').style.borderColor = 'rgba(0, 255, 0, 0.5)';
+    document.getElementById('confirmPassword').style.borderColor = 'rgba(0, 255, 0, 0.5)';
     document.getElementById('passwordMessage').innerHTML = '';
+    document.getElementById('submit-button').disabled = false;
   }
   else {
-    document.getElementById('passwordMessage').style.color = 'red';
-    document.getElementById('password').style.borderColor = 'red';
-    document.getElementById('confirmPassword').style.borderColor = 'red';
-    document.getElementById('passwordMessage').innerHTML = 'Passwords Do Not Match';
+    document.getElementById('passwordMessage').style.color = 'rgba(255, 0, 0)';
+    document.getElementById('password').style.borderColor = 'rgba(255, 0, 0, 0.5)';
+    document.getElementById('confirmPassword').style.borderColor = 'rgba(255, 0, 0, 0.5)';
+    document.getElementById('passwordMessage').innerHTML = '*Passwords do not match';
+    document.getElementById('submit-button').disabled = true;
+  }
+
+  if (document.getElementById('password').value.length < 8) {
+    document.getElementById('passwordMessage').innerHTML = '*Password too short';
   }
 }
